@@ -15,8 +15,8 @@
 - Wrong logic?
 - Magic numbers?
 - Poor structure?
-- test without 'it.each'?
-- const file
+- Test without 'it.each'?
+- Constants missing?
 
 ---
 
@@ -41,7 +41,7 @@
 - Test happy path + 2 edge cases per rule
 - Validate inputs, throw descriptive errors
 
-## Rules A/B/C
+## Rules A-G
 
 - Implement exactly as specified in exercise.md
 - Rules must be composable/testable separately
@@ -61,12 +61,12 @@
 
 1. **Copilot Chat** → Write this **Master Prompt**:
 
-```
+```text
 PLAN discount engine implementation (NO CODE YET):
 
-1. Create 3 pure functions: applyRuleA(), applyRuleB(), applyRuleC()
+1. Create 7 pure functions: applyRuleA(), applyRuleB(), ..., applyRuleG()
 2. Each returns {amount: number, description: string} | null
-3. calculateDiscounts() orchestrates all 3 rules
+3. calculateDiscounts() orchestrates all 7 rules
 4. For EACH rule → suggest 4 Jest tests first
 
 Tech: Node/TS/Jest/CommonJS, use src/types.ts
@@ -86,7 +86,7 @@ Output: Step-by-step plan only
 
 **Goal**: TDD pattern = YOU control Copilot
 
-**For EACH rule (A, B, C)**:
+**For EACH rule (A-G)**:
 
 ```
 1. Copilot Chat: "Suggest 4 Jest tests for Rule A"
@@ -100,7 +100,7 @@ Output: Step-by-step plan only
 **Final step**:
 
 ```
-"Write integration test: all 3 rules apply together"
+"Write integration test: all 7 rules apply together"
 "Combine rules into calculateDiscounts()"
 ```
 
@@ -123,7 +123,7 @@ npm test -- --coverage  # Check 90%+ coverage
 ## Success = ✅
 
 ```
-[ ] All 3 rules work correctly
+[ ] All 7 rules work correctly
 [ ] finalTotal never negative
 [ ] appliedRules lists everything
 [ ] 90%+ test coverage
@@ -149,6 +149,12 @@ describe("Rule A", () => {
     /* ... */
   });
   it("no discount when total <= 300", () => {
+    /* ... */
+  });
+});
+
+describe("Rule G", () => {
+  it("5% discount for VIP customers", () => {
     /* ... */
   });
 });

@@ -64,21 +64,6 @@ Build a **Discount Engine** that calculates final cart price + applied discount 
       "ruleId": "D",
       "description": "5% discount on ELECTRONICS total (≥2 ELECTRONICS items)",
       "amount": -400
-    },
-    {
-      "ruleId": "E",
-      "description": "FOOD category discount (>100)",
-      "amount": -20
-    },
-    {
-      "ruleId": "F",
-      "description": "Free shipping (cart total > 1000)",
-      "amount": -50
-    },
-    {
-      "ruleId": "G",
-      "description": "VIP customer discount (5% off entire cart)",
-      "amount": -424.5
     }
   ]
 }
@@ -89,10 +74,7 @@ Build a **Discount Engine** that calculates final cart price + applied discount 
 **Rule A**: Cart total > 300 → 10% discount on entire cart  
 **Rule B**: ≥3 BOOK items (total quantity) → 15₪ fixed discount  
 **Rule C**: >5 items total → 50% off on cheapest item  
-**Rule D**: ≥2 ELECTRONICS items → 5% discount on ELECTRONICS total  
-**Rule E**: FOOD category total > 100 → 20₪ fixed discount  
-**Rule F**: Cart total > 1000 → Free shipping (deduct 50₪ shipping cost)  
-**Rule G**: Customer ID starts with "vip" → Additional 5% discount on entire cart
+**Rule D**: ≥2 ELECTRONICS items → 5% discount on ELECTRONICS total
 
 **Requirements**:
 

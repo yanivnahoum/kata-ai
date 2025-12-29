@@ -15,7 +15,7 @@
 **Final step**:
 
 ```text
-"Write integration test: all 7 rules apply together"
+"Write integration test: all 4 rules apply together"
 "Combine rules into calculateDiscounts()"
 ```
 

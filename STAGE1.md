@@ -3,17 +3,7 @@
 **Goal**: See Copilot's default behavior (spoiler: it's not great)
 
 1. Open Copilot Chat (`Ctrl+Shift+I`)
-2. Type: `Build discount engine as described in EXERCISE.md`
-3. Let Copilot generate **everything**
-4. Run `npm test` → **Document what breaks**
-
-**WRITE DOWN** (in comments):
-
-- Missing tests?
-- Wrong logic?
-- Magic numbers?
-- Poor structure?
-- Test without 'it.each'?
-- Constants missing?
-
----
+2. Choose this model: Gemini 3 Pro (Preview)
+3. Type: `Build discount engine & tests as described in EXERCISE.md`
+4. Let Copilot generate **everything**
+5. Run `npm test`

@@ -1,8 +1,8 @@
-## Discount Engine Kata Instructions
+# Discount Engine Kata Instructions
 
 This project involves creating a Discount Engine that calculates discounts based on various criteria.
 
-### Getting Started
+## Getting Started
 
 1. Clone the repository.
 2. Install the necessary dependencies.
@@ -12,7 +12,7 @@ This project involves creating a Discount Engine that calculates discounts based
 
 - The engine should support multiple discount types.
 
-### Coding Standarts
+## Coding Standarts
 
 - Use TypeScript with strict typing.
 - Follow functional programming principles.
@@ -22,7 +22,7 @@ This project involves creating a Discount Engine that calculates discounts based
 - Const variable should be inside a \*.const.ts file
 - Utils functions should be inside a \*.util.ts file
 
-### Testing
+## Testing
 
 - Make sure to write unit tests for each discount type and edge cases.
 - Prefer using `it.each` for parameterized tests.

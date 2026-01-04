@@ -5,11 +5,14 @@
 **For EACH rule (A-D)**:
 
 ```text
-1. Copilot Chat: "Suggest 4 Jest tests for Rule A"
-2. Pick best 3 → PASTE IN tests/discountEngine.spec.ts
-3. npm test → RED (good!)
-4. "Implement minimum code in discountEngine.ts to pass THESE EXACT TESTS, the goal: npm test → GREEN"
-5. "Add 2 edge case tests for Rule B-D"
+1. Add EXERCISE.md to the context window of copilot
+2. Copilot Chat:
+    2.1 Change to 'Plan' mode
+    2.2 "Suggest 4 Jest tests for Rule A"
+3. Pick best 3 → PASTE IN tests/discountEngine.spec.ts
+4. npm test → RED (good!)
+5. Copilot Chat: "Implement minimum code in discountEngine.ts to pass THESE EXACT TESTS, the goal: npm test → GREEN"
+6. repeat the process for Rule B-D
 ```
 
 **Final step**:
@@ -18,5 +21,3 @@
 "Write integration test: all 4 rules apply together"
 "Combine rules into calculateDiscounts()"
 ```
-
----

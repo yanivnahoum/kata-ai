@@ -1,6 +1,6 @@
 # ✅ Stage 2: Custom Instructions (20 min)
 
-**Goal**: Fix Copilot with project rules
+**Goal**: Fix Copilot output with instructions!
 
 1. **Edit** `.github/copilot-instructions.md`:
 2. (optional) Use copilot-instructions-example.md for stage 1

@@ -6,7 +6,7 @@ This project involves creating a Discount Engine that calculates discounts based
 
 - The engine should support multiple discount types.
 
-### Coding Standarts
+### Coding Standards
 
 - Use TypeScript with strict typing.
 - Follow functional programming principles.

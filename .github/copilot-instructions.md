@@ -21,6 +21,7 @@ This project involves creating a Discount Engine that calculates discounts based
 - Use descriptive variable and function names.
 - Const variable should be inside a \*.const.ts file
 - Utils functions should be inside a \*.util.ts file
+- types / interfaces should be inside a \*.type.ts file
 
 ### Testing
 

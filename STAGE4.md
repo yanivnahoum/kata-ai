@@ -12,7 +12,7 @@
     2.3 "Suggest 4 Jest tests for Rule A"
     2.4 create ONLY the test file
 3. Pick best 3 → PASTE IN tests/discountEngine.spec.ts
-4. npm test → RED (good!)
+4. npm run test should return RED (tests failed)
 5. Copilot Chat: "Implement minimum code in discountEngine.ts to pass THESE EXACT TESTS, the goal: npm test → GREEN"
 6. REFACTOR the code using copilot to match your project conventions
 7. repeat the process for Rule B-D

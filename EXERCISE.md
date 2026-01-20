@@ -7,6 +7,20 @@
 
 Build a **Discount Engine** that calculates final cart price + applied discount rules.
 
+## Business Rules (IMPLEMENT EXACTLY)
+
+**Rule A**: Cart total > 300 → 10% discount on entire cart  
+**Rule B**: ≥3 BOOK items (total quantity) → 15₪ fixed discount  
+**Rule C**: >5 items total → 50% off on cheapest item  
+**Rule D**: ≥2 ELECTRONICS items → 5% discount on ELECTRONICS total
+
+**Requirements**:
+
+- Rules apply **simultaneously**
+- `finalTotal >= 0` (never negative)
+- Return **all applied rules** with descriptions
+- Pure functions only
+
 ### Input Cart Example
 
 ```json
@@ -68,22 +82,6 @@ Build a **Discount Engine** that calculates final cart price + applied discount 
   ]
 }
 ```
-
-## Business Rules (IMPLEMENT EXACTLY)
-
-**Rule A**: Cart total > 300 → 10% discount on entire cart  
-**Rule B**: ≥3 BOOK items (total quantity) → 15₪ fixed discount  
-**Rule C**: >5 items total → 50% off on cheapest item  
-**Rule D**: ≥2 ELECTRONICS items → 5% discount on ELECTRONICS total
-
-**Requirements**:
-
-- Rules apply **simultaneously**
-- `finalTotal >= 0` (never negative)
-- Return **all applied rules** with descriptions
-- Pure functions only
-
-## Types
 
 ```typescript
 export type CartItem = {

@@ -2,12 +2,6 @@
 
 This project involves creating a Discount Engine that calculates discounts based on various criteria.
 
-### Getting Started
-
-1. Clone the repository.
-2. Install the necessary dependencies.
-3. Run the application and test the discount calculations.
-
 ### Requirements
 
 - The engine should support multiple discount types.

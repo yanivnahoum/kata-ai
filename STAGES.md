@@ -1,7 +1,7 @@
+# 5 Stages - Follow EXACTLY
 
-## 5 Stages - Follow EXACTLY
+## 🚨 Stage 1: Wild Copilot (15 min)
 
-### 🚨 Stage 1: Wild Copilot (15 min)
 **Goal**: See Copilot's default behavior (spoiler: it's not great)
 
 1. Open Copilot Chat (`Ctrl+Shift+I`)
@@ -10,6 +10,7 @@
 4. Run `npm test` → **Document what breaks**
 
 **WRITE DOWN** (in comments):
+
 - Missing tests?
 - Wrong logic?
 - Magic numbers?
@@ -19,40 +20,47 @@
 
 ---
 
-### ✅ Stage 2: Custom Instructions (20 min)
+## ✅ Stage 2: Custom Instructions (20 min)
+
 **Goal**: Fix Copilot with project rules
 
 1. **Create** `.github/copilot-instructions.md`:
+
 ```markdown
 # Discount Engine Rules
 
 ## Tech
+
 - Node 18+, TypeScript 5+, Jest, CommonJS only
 - Pure functions (<30 lines), explicit names
 
 ## Standards
+
 - Write 3-5 Jest tests BEFORE each function
 - No magic numbers → named constants
 - Test happy path + 2 edge cases per rule
 - Validate inputs, throw descriptive errors
 
 ## Rules A/B/C
+
 - Implement exactly as specified in exercise.md
 - Rules must be composable/testable separately
 - Always return appliedRules array (exact format)
 - finalTotal never negative
 ```
 
-2. **Restart VS Code** (reloads instructions)
-3. Run Plan Mode **again** → `npm test`
-4. **COMPARE** Stage 1 vs Stage 2
+1. **Restart VS Code** (reloads instructions)
+2. Run Plan Mode **again** → `npm test`
+3. **COMPARE** Stage 1 vs Stage 2
 
 ---
 
 ### 📝 Stage 3: Master Prompt (25 min)
+
 **Goal**: Write prompts that control Copilot
 
 1. **Copilot Chat** → Write this **Master Prompt**:
+
 ```
 PLAN discount engine implementation (NO CODE YET):
 
@@ -65,8 +73,9 @@ Tech: Node/TS/Jest/CommonJS, use src/types.ts
 Output: Step-by-step plan only
 ```
 
-2. **Review Copilot's plan** → Edit if needed
-3. **Execute step-by-step**:
+1. **Review Copilot's plan** → Edit if needed
+2. **Execute step-by-step**:
+
 ```
 @workspace Implement Step 1 ONLY (Rule A + tests)
 ```
@@ -74,6 +83,7 @@ Output: Step-by-step plan only
 ---
 
 ### 🔄 Stage 4: Controlled TDD (25 min)
+
 **Goal**: TDD pattern = YOU control Copilot
 
 **For EACH rule (A, B, C)**:
@@ -88,6 +98,7 @@ Output: Step-by-step plan only
 ```
 
 **Final step**:
+
 ```
 "Write integration test: all 3 rules apply together"
 "Combine rules into calculateDiscounts()"
@@ -96,6 +107,7 @@ Output: Step-by-step plan only
 ---
 
 ### ✨ Stage 5: Bonus Refactor (5 min)
+
 ```
 @workspace Refactor calculateDiscounts to use reduce() instead of ifs
 Keep all tests GREEN
@@ -112,7 +124,7 @@ npm test -- --coverage  # Check 90%+ coverage
 
 ```
 [ ] All 3 rules work correctly
-[ ] finalTotal never negative  
+[ ] finalTotal never negative
 [ ] appliedRules lists everything
 [ ] 90%+ test coverage
 [ ] YOU controlled Copilot (not vice versa)
@@ -124,7 +136,7 @@ npm test -- --coverage  # Check 90%+ coverage
 ❌ `/plan Write complete solution`  
 ❌ Accept first suggestion blindly  
 ❌ No tests before code  
-❌ Copy-paste without understanding  
+❌ Copy-paste without understanding
 
 ---
 
@@ -132,16 +144,20 @@ npm test -- --coverage  # Check 90%+ coverage
 
 ```typescript
 // tests/discountEngine.spec.ts
-describe('Rule A', () => {
-  it('10% discount when total > 300', () => { /* ... */ });
-  it('no discount when total <= 300', () => { /* ... */ });
+describe("Rule A", () => {
+  it("10% discount when total > 300", () => {
+    /* ... */
+  });
+  it("no discount when total <= 300", () => {
+    /* ... */
+  });
 });
 
-describe('calculateDiscounts', () => {
-  it('all rules combine correctly', () => { /* ... */ });
+describe("calculateDiscounts", () => {
+  it("all rules combine correctly", () => {
+    /* ... */
+  });
 });
 ```
 
 **Ready? Start with Stage 1!** 🏁
-```
-

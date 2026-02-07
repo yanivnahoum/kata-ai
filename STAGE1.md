@@ -3,7 +3,7 @@
 **Goal**: See Copilot's default behavior (spoiler: it's not great)
 
 1. Open Copilot Chat (`Ctrl+Shift+I`)
-2. Choose this model: Gemini 3 Flash (Preview)
-3. Type: `Build discount engine & tests as described in EXERCISE.md`
+2. Choose this model: Claude Sonnet 4.5
+3. Paste: `Build discount engine & tests as described in #file:EXERCISE.md`
 4. Let Copilot generate **everything**
-5. Run `npm test`
+5. Run `./mvnw test`

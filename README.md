@@ -1,23 +1,15 @@
 # Kata
 
-A Node.js TypeScript project.
+A Java 25 Maven project.
 
-## Installation
+## Build & package
 
-npm install
-
-## Build
-
-npm run build
+```bash
+./mvnw verify
+```
 
 ## Test
 
-npm test
-
-## Run
-
-npm start
-
-## Dev
-
-npm run dev
+```bash
+./mvnw test
+```

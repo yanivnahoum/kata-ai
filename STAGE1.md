@@ -6,4 +6,4 @@
 2. Choose this model: Gemini 3 Flash (Preview)
 3. Type: `Build discount engine & tests as described in EXERCISE.md`
 4. Let Copilot generate **everything**
-5. Run `npm test`
+5. Run `mvn test`

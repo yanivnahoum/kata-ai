@@ -32,7 +32,7 @@ Build a **Discount Engine** that calculates final cart price + applied discount 
   "items": [
     {
       "id": "book1",
-      "name": "TypeScript Guide",
+      "name": "AI for Dummies",
       "unitPrice": 120,
       "quantity": 3,
       "category": "BOOK"
@@ -60,7 +60,7 @@ Build a **Discount Engine** that calculates final cart price + applied discount 
 ```json
 {
   "originalTotal": 8510,
-  "finalTotal": 7649.5,
+  "finalTotal": 6723.5,
   "appliedRules": [
     {
       "ruleId": "A",
@@ -81,35 +81,57 @@ Build a **Discount Engine** that calculates final cart price + applied discount 
       "ruleId": "D",
       "description": "5% discount on ELECTRONICS total (≥2 ELECTRONICS items)",
       "amount": -400
+    },
+    {
+      "ruleId": "E",
+      "description": "FOOD category discount (>100)",
+      "amount": -20
+    },
+    {
+      "ruleId": "F",
+      "description": "Free shipping (>1000)",
+      "amount": -50
+    },
+    {
+      "ruleId": "G",
+      "description": "VIP customer discount (5%)",
+      "amount": -425.5
     }
   ]
 }
 ```
 
-```typescript
-export type CartItem = {
-  id: string;
-  name: string;
-  unitPrice: number;
-  quantity: number;
-  category?: "BOOK" | "ELECTRONICS" | "FOOD";
-};
+### Data Structures
 
-export type Cart = { customerId: string; items: CartItem[] };
+```
+Structure CartItem {
+  id: String
+  name: String
+  unitPrice: Number (decimal)
+  quantity: Number (integer)
+  category: Enum (BOOK | ELECTRONICS | FOOD) [optional]
+}
 
-export type AppliedRule = {
-  ruleId: string;
-  description: string;
-  amount: number;
-};
+Structure Cart {
+  customerId: String
+  items: List<CartItem>
+}
 
-export type DiscountResult = {
-  originalTotal: number;
-  finalTotal: number;
-  appliedRules: AppliedRule[];
-};
+Structure AppliedRule {
+  ruleId: String
+  description: String
+  amount: Number (decimal, negative for discounts)
+}
+
+Structure DiscountResult {
+  originalTotal: Number (decimal)
+  finalTotal: Number (decimal)
+  appliedRules: List<AppliedRule>
+}
 ```
 
 ## Your Task
 
-**Implement** `calculateDiscounts(cart: Cart): DiscountResult` in `src/discountEngine.ts`
+**Implement** the discount calculation logic that takes a Cart and returns a DiscountResult.
+
+**Method signature**: `calculateDiscounts(cart: Cart) → DiscountResult`

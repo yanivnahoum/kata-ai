@@ -60,7 +60,7 @@ Build a **Discount Engine** that calculates final cart price + applied discount 
 ```json
 {
   "originalTotal": 8510,
-  "finalTotal": 7649.5,
+  "finalTotal": 6723.5,
   "appliedRules": [
     {
       "ruleId": "A",
@@ -81,6 +81,21 @@ Build a **Discount Engine** that calculates final cart price + applied discount 
       "ruleId": "D",
       "description": "5% discount on ELECTRONICS total (≥2 ELECTRONICS items)",
       "amount": -400
+    },
+    {
+      "ruleId": "E",
+      "description": "FOOD category discount (>100)",
+      "amount": -20
+    },
+    {
+      "ruleId": "F",
+      "description": "Free shipping (>1000)",
+      "amount": -50
+    },
+    {
+      "ruleId": "G",
+      "description": "VIP customer discount (5%)",
+      "amount": -425.5
     }
   ]
 }

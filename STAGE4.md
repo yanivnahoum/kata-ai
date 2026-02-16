@@ -4,7 +4,7 @@
 2. Choose this model: Claude Sonnet 4.5
 3. Paste the text below and Send:
 
-Implement the Discount Engine described in #file:EXERCISE.md using Test-Driven Development (TDD).
+Implement the Discount Engine described in EXERCISE.md using Test-Driven Development (TDD).
 
 For each business rule (A-G):
 

@@ -17,6 +17,12 @@ buildNumber.properties
 *.ear
 hs_err_pid*
 
+#Typescript
+node_modules/
+dist/
+build/
+coverage/
+
 # Build output
 bin/
 

@@ -4,6 +4,6 @@
 
 1. Open Copilot Chat (`Ctrl+Shift+I`)
 2. Choose this model: Claude Sonnet 4.5
-3. Paste: `Build discount engine & tests as described in #file:EXERCISE.md`
+3. Paste: `Build discount engine & tests as described in EXERCISE.md`
 4. Let Copilot generate **everything**
 5. Run `./mvnw test`

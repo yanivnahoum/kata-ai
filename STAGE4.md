@@ -1,26 +1,18 @@
-# 🔄 Stage 4: Controlled TDD (25 min)
+# 🔄 Stage 4: Controlled TDD Implementation
 
-**Goal**: TDD pattern = YOU control Copilot
+1. Open Copilot Chat (`Ctrl+Shift+I`)
+2. Choose this model: Claude Sonnet 4.5
+3. Paste the text below and paste:
 
-**For EACH rule (A-D)**:
+Implement the Discount Engine described in EXERCISE.md using Test-Driven Development (TDD).
 
-```text
-1. Add EXERCISE.md to the context window of copilot
-2. Copilot Chat:
-    2.1 Change to 'Agent' mode
-    2.2 Choose this model: Gemini 3 Flash (Preview)
-    2.3 "Suggest 4 Jest tests for Rule A"
-    2.4 create ONLY the test file
-3. Pick best 3 → PASTE IN tests/discountEngine.spec.ts
-4. npm run test should return RED (tests failed)
-5. Copilot Chat: "Implement minimum code in discountEngine.ts to pass THESE EXACT TESTS, the goal: npm test → GREEN"
-6. REFACTOR the code using copilot to match your project conventions
-7. repeat the process for Rule B-D
-```
+For each business rule (A-G):
 
-**Final step**:
+1. Write unit tests first (RED phase)
+2. You MUST STOP at this point and ask the user to validate test scenarios before proceeding
+3. Implement the minimum code required to pass the tests (GREEN phase)
+4. Refactor to follow project coding standards (REFACTOR phase)
+5. Finally, create a few tests that verify all rules work correctly together.
 
-```text
-"Write integration test: all 4 rules apply together"
-"Combine rules into calculateDiscounts()"
-```
+**IMPORTANT**: You MUST create a file to track your progress under the repo root called `progress.md`, with the task
+description and a checklist of actions to complete.

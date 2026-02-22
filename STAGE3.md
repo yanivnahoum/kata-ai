@@ -1,6 +1,6 @@
 # ✅ Stage 3: Plan & Dev
 
 1. Open Copilot Chat (`Ctrl+Shift+I`)
-2. Choose this model: Gemini 3 Flash (Preview)
+2. Choose this model: Claude Sonnet 4.5
 3. Move to 'Plan' mode
-4. Type: `Build discount engine as described in EXERCISE.md`
+4. Paste: `Build discount engine as described in EXERCISE.md`
